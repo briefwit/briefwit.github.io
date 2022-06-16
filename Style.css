@@ -1,0 +1,117 @@
+:root {
+	--lightcyan_foreground: rgb(220, 250, 250);
+	--cyan_border: #93e9e9;
+	
+	--helvetica: "Helvetica";
+	
+	--main_width_base: 80%;
+	--main_width: calc(var(--main_width_base) - var(--padding_default)*2);
+	
+	--main_margin: calc((100% - var(--main_width_base)) / 2);
+	--main_width_responsive: calc(var(--main_width) - var(--sidebar_left_size));
+	--main_margin_left_responsive: calc(var(--main_margin) - var(--sidebar_left_size));
+	--main_margin_right_responsive: calc(var(--main_margin) + var(--sidebar_left_size));
+	
+	--fontsize_1: 28px;
+	--fontsize_2: 24px;
+	--fontsize_3: 20px;
+	--fontsize_4: 17px;
+	
+	--padding_default: 16px;
+	--padding_threehalf: calc(var(--padding_default) * 1.5);
+	
+	--image_width: 35%;
+}
+
+html {
+	overflow-wrap: break-word;
+	background-color: var(--cyan_border);
+	font-family: var(--helvetica); 
+}
+
+div, body, p, h1, h2, h3, h4, h5, img, ul {
+	padding: 0;
+	color: rgb(0, 0, 0);
+	text-align: justify;
+  	text-justify: inter-word;
+}
+
+h1, img {
+	text-align: center;
+}
+
+
+p, h1, h2, h3, h4, h5, img, ul {
+	margin: 0.8% 0;
+}
+
+div + h1, div + h2, div + h3, div + h4 {
+	padding: var(--padding_default) 0 var(--padding_default) 0;
+}
+h1 {
+	font-size: var(--fontsize_1);
+}
+h2 {
+	font-size: var(--fontsize_2);
+}
+h3 {
+	font-size: var(--fontsize_3);
+}
+h4 {
+	font-size: var(--fontsize_4);
+	font-style: italic;
+	font-weight: normal;
+	font-family: monospace, monospace;
+}
+ul {
+	padding: 0 0 var(--padding_default) var(--padding_threehalf);
+	line-height: 1.25;
+}
+ul:only-child {
+	padding: 0 0 0 var(--padding_default);
+}
+img {
+	max-width: var(--image_width);
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+a:link {
+	color: inherit;
+}
+a:visited {
+	color: inherit;
+}
+a:hover {
+	color: inherit;
+}
+a:active {
+	color: inherit;
+}
+
+.alink{
+	text-decoration:underline;
+}
+
+.main {
+	padding: var(--padding_default);
+	overflow-x: hidden;
+}
+
+.centre.main {
+	width: var(--main_width);
+	margin: 0 var(--main_margin) 0 var(--main_margin);
+	padding: var(--padding_default);
+	background-color: var(--lightcyan_foreground);
+	margin-top: 10px;
+}
+
+.keyquotes.images {
+	text-align: center;
+}
+
+.plainlink {
+	text-decoration: none;
+	color: black;
+}
